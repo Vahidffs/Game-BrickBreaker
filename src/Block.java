@@ -10,11 +10,15 @@ import javax.imageio.ImageIO;
 public class Block extends Rectangle{
 	Image pic;
 	boolean destroyed;
+	int movX;
+	int movY;
 	public Block(int x,int y,int w, int h,String s) {
 		this.x = x;
 		this.y = y;
 		this.height = h;
 		this.width = w;
+		this.movX = 1;
+		this.movY = 1;
 		try {
 			pic = ImageIO.read(new File("src/" + s));
 		} catch (IOException e) {
